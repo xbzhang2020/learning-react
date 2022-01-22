@@ -2,13 +2,12 @@
 // import MyState from './components/state'
 // import MyRedux from './components/redux'
 // import MyMobx from "./components/mobx";
-import HookDemo from './hooks'
+// import HookDemo from './hooks'
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello React</h1>
-      <HookDemo />
+    <div className="App">
+      <h1>Hello React, learn react</h1>
     </div>
   )
 }

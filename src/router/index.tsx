@@ -1,7 +1,47 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useRoutes } from 'react-router-dom'
 import { Home, About, Products, Contact, ProductDetail, Whoops404 } from './pages'
 
 function App() {
+  return useRoutes([
+    {
+      path: '/',
+      element: <Home />,
+      children: [
+        {
+          index: true,
+          element: <div>Click a Link.</div>
+        },
+        {
+          path: 'about',
+          element: <About />
+        },
+        {
+          path: 'products',
+          element: <Products />,
+          children: [
+            {
+              path: ':id',
+              element: <ProductDetail />
+            }
+          ]
+        },
+        {
+          path: 'contact',
+          element: <Contact />
+        },
+        {
+          path: '*',
+          element: <Whoops404 />
+        }
+      ]
+    },
+    {}
+  ])
+}
+
+export default App
+
+export function App2() {
   return (
     <div>
       <Routes>
@@ -18,5 +58,3 @@ function App() {
     </div>
   )
 }
-
-export default App

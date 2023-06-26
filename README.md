@@ -4,6 +4,6 @@
 
 - JSX
 - 组件
-- 数据流：prop和state、context、redux、mobx
+- 数据流：prop 和 state、context、redux
 - 生命周期
 - 路由

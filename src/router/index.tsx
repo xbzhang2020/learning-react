@@ -1,3 +1,4 @@
+import React from 'react'
 import { Routes, Route, useRoutes } from 'react-router-dom'
 import { Home, About, Products, Contact, ProductDetail, Whoops404 } from './pages'
 

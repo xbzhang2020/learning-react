@@ -1,20 +1,20 @@
-import React from "react";
-import { ThemeContext, themes } from "./context";
-import ThemedButton from "./ThemedButton";
+import React from 'react'
+import { ThemeContext, themes } from './context'
+import ThemedButton from './ThemedButton'
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      theme: themes.light,
-    };
+      theme: themes.light
+    }
   }
 
   toggleTheme = () => {
-    this.setState((state) => ({
-      theme: state.theme === themes.dark ? themes.light : themes.dark,
-    }));
-  };
+    this.setState(state => ({
+      theme: state.theme === themes.dark ? themes.light : themes.dark
+    }))
+  }
 
   render() {
     return (
@@ -23,8 +23,8 @@ class App extends React.Component {
           <ThemedButton content="换肤" changeTheme={this.toggleTheme} />
         </ThemeContext.Provider>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

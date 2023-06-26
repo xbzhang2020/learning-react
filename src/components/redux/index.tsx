@@ -1,5 +1,5 @@
-import { Provider } from "react-redux";
-import store from "./store";
+import { Provider } from 'react-redux'
+import store from './store'
 import Counter from './Counter'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <Counter />
       </div>
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

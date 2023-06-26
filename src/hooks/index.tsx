@@ -21,7 +21,7 @@ function App() {
     event.preventDefault()
 
     // 模拟提交表单行为
-    console.log({ username: usernameProps.value, rate, comment: commentProps.value })
+    // console.log({ username: usernameProps.value, rate, comment: commentProps.value })
   }
 
   function reset(event) {

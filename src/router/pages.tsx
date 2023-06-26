@@ -1,3 +1,4 @@
+import React from 'react'
 import { NavLink, Outlet, useParams, useLocation, useSearchParams, useNavigate } from 'react-router-dom'
 import products from './products'
 
@@ -20,7 +21,7 @@ export function Home() {
   return (
     <div>
       <nav>
-        {links.map((item) => (
+        {links.map(item => (
           <NavLink
             key={item.path}
             to={item.path}
@@ -58,7 +59,7 @@ export function Products() {
       <input
         type="text"
         value={searchParams.get('filter') || ''}
-        onChange={(event) => {
+        onChange={event => {
           const filter = event.target.value
           if (filter) {
             setSearchParams({ filter })
@@ -69,12 +70,12 @@ export function Products() {
       />
       <div>
         {products
-          .filter((item) => {
+          .filter(item => {
             const filter = searchParams.get('filter')
             if (!filter) return true
             return item.name.toLowerCase().startsWith(filter.toLowerCase())
           })
-          .map((item) => (
+          .map(item => (
             <div key={item.id}>{<Product dataSource={item} />}</div>
           ))}
       </div>
@@ -89,7 +90,7 @@ export function Product(props: any) {
 
 export function ProductDetail() {
   const params = useParams()
-  const product = products.find((item) => item.id === params.id)
+  const product = products.find(item => item.id === params.id)
   console.log(product)
 
   return (

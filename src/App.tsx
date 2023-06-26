@@ -1,7 +1,7 @@
 // import MyContext from './components/context'
 // import MyState from './components/state'
 // import MyRedux from './components/redux'
-// import MyMobx from "./components/mobx";
+
 import HooksDemo from './hooks'
 // import RouterDemo from './router'
 
